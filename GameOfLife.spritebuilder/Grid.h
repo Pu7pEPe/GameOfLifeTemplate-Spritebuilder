@@ -10,6 +10,8 @@
 
 @interface Grid : CCSprite
 
+-(void)evolveStep;
+-(void)countNeighbors;
 
 
 @property (nonatomic, assign) int totalAlive;

@@ -97,4 +97,75 @@ static const int GRID_COLUMNS = 10;
 
 }
 
+
+-(void)evolveStep
+{
+    //update each neightbour count
+    [self countNeighbors];
+    
+    //update each Creature's State
+    [self updateCreatures];
+    
+    //update the generation so the label's text will display correctly
+    _generation++;
+}
+
+-(void)countNeighbors
+{
+    //iterate through the rows
+    for (int i = 0; i < [_gridArray count]; i++)
+    {
+        //iterate through the column
+        for (int j = 0; j < [_gridArray[i] count]; j++)
+        {
+            //access the creature in this cell.
+            Creature *currentCreature = _gridArray[i][j];
+            
+            //setup the neightbours property
+            currentCreature.livingNeighbors = 0;
+            
+            //examine the neighbouring cells on to of the current
+            
+            //go through the row on top, the current row, and the row past it.
+            for (int x = (i-1); x<= (i+1); x++)
+            {
+                //go through the column to the left, current column, column on the right
+                for (int y = (j-1); y <= (j+1); y++)
+                {
+                    //check that the cell isn't off screen.
+                    BOOL isIndexValid;
+                    isIndexValid = [self isIndexValidForX:x andY:y];
+                    
+                    // skip over all cells that are off screen and the cell that contains current creature
+                    if(!((x == i) && (y == j)) && isIndexValid)
+                    {
+                        Creature *neighbour = _gridArray[x][y];
+                        if (neighbour.isAlive)
+                        {
+                            currentCreature.livingNeighbors += 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+- (BOOL)isIndexValidForX:(int)x andY:(int)y
+{
+    BOOL isIndexValid = YES;
+    if(x < 0 || y < 0 || x >= GRID_ROWS || y >= GRID_COLUMNS)
+    {
+        isIndexValid = NO;
+    }
+    return isIndexValid;
+}
+
+-(void)updateCreatures
+{
+    
+}
+
+
 @end
