@@ -24,6 +24,11 @@ static const int GRID_COLUMNS = 10;
     float _cellHeight;
 }
 
++ (void)initialize
+{
+    NSLog(@"Loaded");
+}
+
 - (void)onEnter
 {
     [super onEnter];
