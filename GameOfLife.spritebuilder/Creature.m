@@ -13,9 +13,9 @@
 
 - (instancetype)initCreature {
     // since we made Creature inherit from CCSprite, 'super' below refers to CCSprite
-    //self = [super initWithImageNamed:@"GameOfLifeAssets/Assets/bubble.png"];
+    self = [super initWithImageNamed:@"GameOfLifeAssets/Assets/bubble.png"];
     
-    self = [super initWithImageNamed:@"/Users/home/GameOfLifeTemplate-Spritebuilder/GameOfLife.spritebuilder/GameOfLifeAssets/Assets/bubble.png"];
+    //self = [super initWithImageNamed:@"/Users/home/GameOfLifeTemplate-Spritebuilder/GameOfLife.spritebuilder/GameOfLifeAssets/Assets/bubble.png"];
     
     
     if (self) {
