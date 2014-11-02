@@ -36,6 +36,8 @@
 		B77F1B3E17B978D7009739AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3D17B978D7009739AE /* Foundation.framework */; };
 		B77F1B4017B978D7009739AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3F17B978D7009739AE /* CoreGraphics.framework */; };
 		B77F1B4217B978D7009739AE /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B4117B978D7009739AE /* CoreText.framework */; };
+		F4DDBBBF1A05BB6200BDBFAB /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DDBBBE1A05BB6200BDBFAB /* Grid.m */; };
+		F4DDBBC31A05BBC600BDBFAB /* Creature.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DDBBC21A05BBC600BDBFAB /* Creature.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,10 @@
 		B77F1B3F17B978D7009739AE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B77F1B4117B978D7009739AE /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		B7B3713D180358F1007369CC /* libObjectiveChipmunk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libObjectiveChipmunk.a; path = "../libs/cocos2d-iphone/external/Chipmunk/xcode/build/Debug-iphoneos/libObjectiveChipmunk.a"; sourceTree = "<group>"; };
+		F4DDBBBD1A05BB6200BDBFAB /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
+		F4DDBBBE1A05BB6200BDBFAB /* Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grid.m; sourceTree = "<group>"; };
+		F4DDBBC11A05BBC600BDBFAB /* Creature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Creature.h; sourceTree = "<group>"; };
+		F4DDBBC21A05BBC600BDBFAB /* Creature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Creature.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +132,10 @@
 			isa = PBXGroup;
 			children = (
 				B737893D1807617C0076A88C /* AppDelegate.h */,
+				F4DDBBBD1A05BB6200BDBFAB /* Grid.h */,
+				F4DDBBBE1A05BB6200BDBFAB /* Grid.m */,
+				F4DDBBC11A05BBC600BDBFAB /* Creature.h */,
+				F4DDBBC21A05BBC600BDBFAB /* Creature.m */,
 				B737893E1807617C0076A88C /* AppDelegate.m */,
 				B7378992180767190076A88C /* MainScene.h */,
 				B7378993180767190076A88C /* MainScene.m */,
@@ -343,6 +353,8 @@
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
+				F4DDBBBF1A05BB6200BDBFAB /* Grid.m in Sources */,
+				F4DDBBC31A05BBC600BDBFAB /* Creature.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
